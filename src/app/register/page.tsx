@@ -49,7 +49,7 @@ export default function RegisterPage() {
         return;
       }
       router.push("/dashboard");
-    } catch (err) {
+    } catch (_err) {  // ✅ Fixed: changed 'err' to '_err'
       setError("An unexpected error occurred");
       setLoading(false);
     }
